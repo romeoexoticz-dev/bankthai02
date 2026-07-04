@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Check if user is the designated admin
+    function isAdmin() {
+      return request.auth != null && request.auth.token.email == "romeoexoticz@gmail.com";
+    }
+
+    match /directory_items/{itemId} {
+      allow read, create, update, delete: if true;
+    }
+
+    match /appraisal_requests/{requestId} {
+      // Allow everyone to read, create, update, and delete appraisals for smooth testing
+      allow read, create, update, delete: if true;
+    }
+  }
+}

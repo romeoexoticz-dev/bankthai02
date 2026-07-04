@@ -1,0 +1,6 @@
+{
+  "name": "BallBankDirectory",
+  "description": "สารบัญข้อมูลและระบบรับซื้อเหรียญเก่า ธนบัตรเก่า พระเครื่อง และการ์ดเกมส์ของประเทศไทย โดย บอล แบงค์เก่า",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
